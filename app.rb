@@ -1,6 +1,6 @@
 # app.rb
 require 'sinatra'
-require 'shotgun'
+require 'shotgun' if development?
 
 
 get '/' do
