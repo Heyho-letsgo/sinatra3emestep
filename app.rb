@@ -3,7 +3,7 @@ require 'sinatra'
 require 'shotgun'
 
 
-get '/' do
+get '/hello' do
     "Hello World!"
   #erb :racine
 end
