@@ -4,7 +4,8 @@ require 'shotgun'
 
 
 get '/' do
-  erb :racine
+    "Hello World!"
+  #erb :racine
 end
 
 get '/:prenom' do
