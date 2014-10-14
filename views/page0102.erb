@@ -1,0 +1,171 @@
+<div class="container">
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-9">
+        <h1>Créer l'application rails</h1>
+
+        <p>A présent que Rails est installé, il est temps de créer l'application Rails.</p>
+
+        <h2>Objectif</h2> #"Hello #{params[:prenom]} !"
+
+        <p>Dans cet exercice nous allons créer une nouvelle application Rails appelée flix. C'est un exercice
+          très court qui permet de rassembler tout ce qui est nécessaire pour qu'une lancer une application
+          Rails.</p>
+
+        <h2>Générer le squelette de l'application.</h2>
+
+        <p>Chaque application Rails a une arborescence de répertoires et de fichiers commune. Créer tout ces
+          répertoires et fichiers serait fastidieux et sujet à erreur. Rails propose une ligne de commande qui
+          permet de générer une application Rails fonctionnelle et épurée. Au fur et à mesure de l'exercice,
+          nous modifierons cette arborescence et donc cette application.</p>
+
+        <h2>1. Démarrons et créons un répertoire appelé rails_studio et déplaçons nous dans ce répertoire. </h2>
+
+        <p>Si vous êtes sous OsX ou Linux, créez un répertoire (dossier) dans votre répertoire personnel (home -
+          représenté par le caractère tilde - ~) et tapez ces deux commandes à la suite.</p>
+
+        <script src="https://gist.github.com/Heyho-letsgo/f3dd6d4d4219d75cb18a.js"></script>
+
+        Si vous êtes sous Windows, tapez les commandes suivantes.
+        <script src="https://gist.github.com/Heyho-letsgo/c3c403cdc8e4a30e1810.js"></script>
+
+        <h2>2. Ensuite, utilisez la commande rails pour générer une nouvelle application Rails appelée
+          flix:</h2>
+
+        <script src="https://gist.github.com/Heyho-letsgo/bf25289a1c25e0abad72.js"></script>
+        <p>Lancer cette commande génère la création de tout les répertoires et fichiers nécessaires à
+          l'intérieur d'un nouveau répertoire flix . Enfin, Bundler se lance automatiquement afin d'installer
+          les gems de base requisent.</p>
+
+        <h2>3. Continuons et déplaçons nous dans le réperoire flix:</h2>
+
+        <script src="https://gist.github.com/Heyho-letsgo/0e9600b2f50bcba19646.js"></script>
+
+        <h2>4. Ouvrez le répertoire dans l'éditeur de texte Sublime Text en tapant:</h2>
+
+        <p> sous Osx et Unix:</p>
+
+        <script src="https://gist.github.com/Heyho-letsgo/e5759d4a534e04e2e7e6.js"></script>
+
+        <p>Sous Windows, ouvrez Sublime Text et faite</p>
+        <script src="https://gist.github.com/Heyho-letsgo/1e96fa725268f17492f5.js"></script>
+
+        <h2>2. Lancer l'application.</h2>
+
+        <h3>1. Dans le répertoire flix, démarrez votre nouvelle application Rails en tapant:</h3>
+        <script src="https://gist.github.com/Heyho-letsgo/678831f53aa0beac4fbe.js"></script>
+        <p>Cette commande lance un serveur web léger appelé WEBrick. Après quelques vous devriez voir quelque
+          chose comme cela:</p>
+        <script src="https://gist.github.com/Heyho-letsgo/0f38d8a4f3400cab4e1a.js"></script>
+        <p>Vous avez à présent un serveur web écoutant sur le port 3000 de votre machine.</p>
+
+        <h3>2. Ouvrez votre navigateur web et entrez l'URL http://0.0.0.0:3000 ou http://localhost:3000, vous
+          devriez afficher ceci...</h3>
+
+        <p>Page d'accueil de rails, une fois le serveur lancé</p>
+
+        <img src="images/rails_serveur001.png" class="img-responsive img-thumbnail"
+             alt="Image accueil serveur lancé">
+
+        <p>3. En tant que squelette, cette application ne propose pas grand chose à voir (pas encore...), mais
+          c'est toujours une bonne chose de vérifier que tout fonctionne avant de commencer les modifications.
+          En cliquant sur "About your application’s environment", vous afficherez une liste dynamiquement
+          générée indiquant votre version de Ruby, de Rails ainsi que le gems installées.
+        </p>
+
+        <p>4. C'est à présent une bonne idée de localiser le lien <a href="#">"Rails API"</a> et de l'ajouter
+          dans vos signets pour une utilisation future.</p>
+
+        <p>5. Enfin, ouvrez une nouvelle fenêtre de votre terminal afin d'y exécuter vos commandes futures tout
+          en laissant fonctionner le serveur. N'oubliez pas de revenir dans votre .dossier flix dans votre
+          terminal.
+        </p>
+
+        <h2>Bonus Round</h2>
+
+        <p>Certains curieux aimeraient avoir des informations au sujet des répertoires et fichiers générés par
+          la commande rails new flix .
+        </p>
+
+        <p>Alors voilà...</p>
+        <ul>
+          <li><p><code>app</code> est l'endroit ou vous passerez la plupart de votre temps, c'est là que vous
+            mettrez votre code. Rails accorde une importance extrême à garder le code organisé; aussi ce
+            répertoire "app" a un nombre de sous répertoire:</p>
+          </li>
+          <li><p><code>assets</code> contient des sous-répertoires dans lesquels vous stockerez vos images,
+            vos fichiers JavaScript et vos stylesheets (feuilles de style).</p>
+          </li>
+          <li><p><code>models</code>, <code>views</code>, et <code>controllers</code> sont les répertoires
+            justement nommés dans lesquels vous déposerez le code pour vos model, view et controller.</p>
+          </li>
+          <li><p><code>helpers</code> est l'endroit ou vous poserez des modules Ruby qui définirons des
+            méthodes utiles pour les views (vues).</p></li>
+          <li><p><code>mailers</code> est l'endroit où vous mettrez vos classes Ruby pour générer et envoyer
+            des e-mails.</p></li>
+          <li><p><code>bin</code> est un dossier important. Il contient des scripts rails, par exemple.</p>
+          </li>
+          <li>
+            <p><code>config</code> C'est là que vous allez ajuster les réglages de votresu application. Au
+              début, il n'y a pas à toucher les fichiers de ce répertoire, mais au fur et à mesure de
+              l'volution de ce cours, nous nous arrêterons aux endroits suivants:
+            </p></li>
+          <ul>
+            <li><code>database.yml</code> est le fichier dans lequel la base est configurée en fonction des
+              environnements.
+            </li>
+            <li><code>routes.rb</code> dresse la carte des requêtes entrantes (URLs) to application code.
+            </li>
+            <li><code>environments</code> est un répertoire qui contient trois fichier qui permettent de
+              définir des réglages spécifiques à chaque environnement; développement, test et production.
+            </li>
+            <li><code>initializers</code> est un répertoire dans lequel vous mettez le code Ruby qui a
+              besoin d'être exéccuter au démarage de l'application.
+            </li>
+            <li><code>db</code> contient tout ce qui est en lien avec la base de données, cela inclu les
+              fichiers de migrations et dans le cas où la base de données SQLite3 est utilisée par
+              défault, le fichier de base de données lui même.
+            </li>
+            <li><code>lib</code> contient un sous répertoire important - tasks (taches)</li>
+            <ul>
+              <li><code>tasks</code> c'est là que vous mettrez vos Rake task (taches Rake) concernant
+                votre application; ces fichiers ont une extension .rake
+              </li>
+            </ul>
+          </ul>
+        </ul>
+        <p>
+        <ul>
+          <li><code>log</code> c'est là que sont stockés tous les évènements concernant votre application.
+            Chaque environnement à son propre fichier log.
+          </li>
+          <li><code>public</code> est le dossier "root" (racine) de l'application. Il contient les pages
+            statiques du site. Par exemple 404.html est à cet endroit et est proposé quand une page demandée
+            n'est pas présente.
+          </li>
+          <li><code>test</code> si on utilise test/unit, c'est là où doivent être posé les fichiers de test.
+            Les sous-répertoires sont organisés de la même façon que dans le dossier app. Dans ce cours nous
+            utiliserons Rspec, donc vous pouvez ignorez ce répertoire test.
+          </li>
+          <li><code>tmp</code> c'est l'endroit où Rails stocke les fichiers temporaires nécessaires à
+            l'application. On n'y va jamais...
+          </li>
+          <li><code>vendor</code> était l'endroit où on on rangeait des codes d'une tiers-partis. A présent on
+            utilise généralement des gems qui sont déclarées dans le fichier Gemfile.rb
+          </li>
+
+        </ul>
+        </p>
+      </div>
+
+      <div class="col-md-3">
+        <ul>
+          <li><a href="0102.html">0102 - Créer l'application</a></li>
+          <li><a href="0103.html">0103 - Views et Controllers</a></li>
+        </ul>
+
+
+      </div>
+    </div>
+  </div>
+</div>
