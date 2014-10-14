@@ -3,12 +3,18 @@ require 'sinatra'
 require 'shotgun'
 
 
-get '/hello' do
-    "Hello World!"
-  #erb :racine
+get '/' do
+  erb :racine
 end
 
-get '/:prenom' do
+# 404 Error!
+not_found do
+  status 404
+  erb :racine
+end
+
+
+get '/index' do
   #"Hello #{params[:prenom]} !"
   erb :index
 end
@@ -32,4 +38,8 @@ end
 get '/tuto/page0104' do
   #"page 0102"
   erb :page0104
+end
+
+get '/ruby' do
+  erb :ruby
 end
