@@ -1,5 +1,4 @@
 # config.ru
-require './app'
-run HelloWorldApp
-
+require './hello'
+run Sinatra::Application
 require 'rubygems'
