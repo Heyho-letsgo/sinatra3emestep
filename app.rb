@@ -32,22 +32,3 @@ get '/tuto/page0104' do
   #"page 0102"
   erb :page0104
 end
-
-
-
-
-get '/hello/:nom' do |n|
-  "Hello #{n}! ""Page d'accueil"
-end
-
-
-get '/say/*/to/*' do
-  # matches /say/hello/to/world
-  params[:splat].inspect # => ["hello", "world"]
-end
-
-
-get '/download/*.*' do
-  # matches /download/path/to/file.xml
-  params[:splat] # => ["path/to/file", "xml"]
-end
