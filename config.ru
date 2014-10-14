@@ -1,4 +1,4 @@
 # config.ru
-require './hello'
+require './racine'
 run Sinatra::Application
 require 'rubygems'
