@@ -1,3 +1,10 @@
-<%  @posts.each do |post| %>
-    <h2><a href="/posts/<%= post.id %>"><%= post.title %></a></h2>
-<% end %>
+
+
+<div class="container">
+<h2>Liste des posts</h2>
+  <%  @posts.each do |post| %>
+    <h3><a href="/posts/<%= post.id %>"><%= post.id %> - <%= post.title %></a></h3>
+    <p><%= post.body %> <span><%= pretty_date(post.created_at) %></p></span>
+
+  <% end %>
+</div>

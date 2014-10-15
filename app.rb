@@ -7,18 +7,39 @@ set :database, "sqlite3:blog.db"
 class Post < ActiveRecord::Base
 
 end
-
+# Affiche la liste des posts
 get "/posts" do
   @title = "Liste des Posts"
   @posts = Post.order("created_at DESC")
   erb :"posts/index"
 end
 
+# Affiche le formulaire pour créer un nouveau post
 get "/posts/new" do
   @title = "Nouveau post"
   @post = Post.new
   erb :"posts/new"
 end
+
+# Envoie les données de posts/new à la base de données
+post "/posts" do
+  @post = Post.new(params[:post])
+  if @post.save
+    redirect "posts/#{@post.id}"
+  else
+    erb :"posts/new"
+  end
+end
+
+# Affiche un post
+get "/posts/:id" do
+  @post = Post.find(params[:id])
+  @title = "Post num #{:id}"
+  erb :"posts/show"
+end
+
+
+
 
 
 get '/' do
