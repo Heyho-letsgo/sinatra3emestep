@@ -1,9 +1,18 @@
 # app.rb
-require 'sinatra'
-require 'shotgun' if development?
+require "sinatra"
+require "sinatra/activerecord"
 
+set :database, "sqlite3:blog.db"
 
+class Post < ActiveRecord::Base
 
+end
+
+get "/posts" do
+  @posts = Post.order("created_at DESC")
+  erb :"posts/index"
+
+end
 
 
 get '/' do
@@ -29,7 +38,7 @@ end
 
 
 get '/tuto/page0102' do
-   #"page 0102"
+  #"page 0102"
   erb :page0102
 end
 
