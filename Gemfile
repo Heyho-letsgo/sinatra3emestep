@@ -18,7 +18,7 @@ group :development do
   gem 'rake'
 end
 
-group :development do
+group :production do
   gem 'rake'
 end
 
