@@ -14,7 +14,7 @@ gem "pg"
 group :development do
   gem "shotgun"
   gem "tux"
-  gem 'rake'
+  #gem 'rake'
 end
 
 group :production do
