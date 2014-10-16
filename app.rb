@@ -1,8 +1,14 @@
 # app.rb
 require "sinatra"
 require "sinatra/activerecord"
+require 'sinatra/sequel'
 
-set :database, "sqlite3:blog.db"
+configure do
+  #DB = Sequel.connect(sqlite3:blog.db)
+  DB = Sequel.connect(ENV['DATABASE_URL'] || 'sqlite://database.db')
+
+end
+  #set :database, "sqlite3:blog.db"
 
 class Post < ActiveRecord::Base
 
