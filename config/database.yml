@@ -6,7 +6,7 @@ development:
   host: localhost
 
 production:
-  adapter: postgresql
+  adapter: <%= ENV['ADAPT_PG_PR'] %>
   database: <%= ENV['DB_PG_PR'] %>
   username: <%= ENV['PG_USER_PR'] %>
   password: <%= ENV['PG_PASS_PR'] %>
