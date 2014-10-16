@@ -5,7 +5,6 @@ gem "sinatra"
 gem "sinatra-activerecord"
 gem "activerecord"
 gem "pg"
-gem 'rake'
 
 
 #gem 'sinatra-sequel'
@@ -18,4 +17,7 @@ group :development do
   gem "tux"
 end
 
+group :development do
+  gem 'rake'
+end
 
