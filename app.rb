@@ -1,6 +1,9 @@
 # app.rb
 require "sinatra"
 require "sinatra/activerecord"
+
+require 'active_record'
+ActiveRecord::Base.establish_connection(ENV['postgres://bjomyjwspnoppv:Q6yL7T6bBdOfKFPAldqQEn2hF9@ec2-54-204-31-13.compute-1.amazonaws.com:5432/d20v4mp7qk2u0c'] || 'postgres://localhost/mydb')
 #require 'sinatra/sequel'
 
 # configure do
