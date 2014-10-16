@@ -1,10 +1,11 @@
 # app.rb
 require "sinatra"
 require "sinatra/activerecord"
-
 require 'active_record'
-require 'pg' if production?
-require 'sqlite3' if development?
+require './config/environments' #database configuration
+#require './models/model'        #Model class
+
+#require 'sqlite3'
 
 ActiveRecord::Base.establish_connection(ENV['postgres://bjomyjwspnoppv:Q6yL7T6bBdOfKFPAldqQEn2hF9@ec2-54-204-31-13.compute-1.amazonaws.com:5432/d20v4mp7qk2u0c'] || 'postgres://localhost/blog.db')
 

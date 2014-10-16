@@ -4,6 +4,7 @@ ruby '2.0.0'
 gem "sinatra"
 gem "sinatra-activerecord"
 gem "activerecord"
+gem "pg"
 
 
 #gem 'sinatra-sequel'
@@ -11,13 +12,9 @@ gem "activerecord"
 
 
 group :development do
-  gem "sqlite3"
+  #gem "sqlite3"
   gem "shotgun"
   gem "tux"
 end
 
 
-
-group :production do
-  gem 'pg'
-end
