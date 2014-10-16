@@ -5,11 +5,11 @@ require 'active_record'
 require './config/environments' #database configuration
 #require './models/model'        #Model class
 
-#require 'sqlite3'
+require 'sqlite3'
 
 ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || 'postgres://localhost/blog.db')
 
- set :database, "postgress:blog.db"
+ set :database, "sqlite3:blog.db"
 
 class Post < ActiveRecord::Base
 
