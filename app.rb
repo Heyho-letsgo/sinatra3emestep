@@ -7,9 +7,9 @@ require './config/environments' #database configuration
 
 #require 'sqlite3'
 
-ActiveRecord::Base.establish_connection(ENV['postgres://bjomyjwspnoppv:Q6yL7T6bBdOfKFPAldqQEn2hF9@ec2-54-204-31-13.compute-1.amazonaws.com:5432/d20v4mp7qk2u0c'] || 'postgres://localhost/blog.db')
+ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || 'postgres://localhost/blog.db')
 
- set :database, "sqlite3:blog.db"
+ set :database, "postgress:blog.db"
 
 class Post < ActiveRecord::Base
 
