@@ -15,6 +15,7 @@ group :development do
   gem "sqlite3"
   gem "shotgun"
   gem "tux"
+  gem 'rake'
 end
 
 group :development do
