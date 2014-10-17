@@ -7,7 +7,7 @@ require './config/environments' #database configuration
 
 require 'sqlite3'
 
-ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || 'postgres://localhost/blog.db')
+#ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || 'postgres://localhost/blog.db')
 
  set :database, "sqlite3:blog.db"
 
